@@ -34,7 +34,7 @@ TWITCH_LOGIN         = "tachinosaure"
 # embed bienvenue / au revoir
 Bienvenue = discord.Embed(
     title="Bienvenue sur Le Nid ! <:TachiSalut:1413598803621187684>",
-    description="Commence par aller checker le salon <#1413233587888586833> \n Puis viens saluer la commu dans <#1412869316759781406> \n Et enfin présente toi dans <#1413239378687561728> \n \n Amuses toi bien sur Le Nid 🥰",
+    description="Commence par aller checker le salon <#1234567890> \n Puis viens saluer la commu dans <#1234567890> \n Et enfin présente toi dans <#1234567890> \n \n Amuses toi bien sur Le Nid 🥰",
     color=discord.Color.yellow()
 )
 
@@ -46,13 +46,13 @@ AuRevoir = discord.Embed(
 
 @bot.event
 async def on_member_join(member):
-    channel = bot.get_channel(1412868706765242408)
+    channel = bot.get_channel(1234567890)
     if channel:
         await channel.send(content=f"{member.mention}", embed=Bienvenue)
 
 @bot.event
 async def on_member_remove(member):
-    channel = bot.get_channel(1412874827605217421)
+    channel = bot.get_channel(1234567890)
     if channel:
         await channel.send(content=f"{member.mention}", embed=AuRevoir)
 
